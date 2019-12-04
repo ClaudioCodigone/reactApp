@@ -1,0 +1,40 @@
+{
+  "name": "curso-mearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegohernanibanez/curso-mearn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegohernanibanez/curso-mearn/issues"
+  },
+  "homepage": "https://github.com/diegohernanibanez/curso-mearn#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mdbreact": "^4.22.1",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "react-data-fetcher": "0.0.1",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

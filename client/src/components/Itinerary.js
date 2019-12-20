@@ -59,7 +59,7 @@ class Itinerary extends Component {
     return (
 
       <div className="App">
-        <h2 className="App-title">asd</h2>
+        <h2 className="App-title text-center">Itinerary</h2>
         <div>
           {!this.props.item
             ? "Cargando..." : itin}

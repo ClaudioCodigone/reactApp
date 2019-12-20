@@ -5,7 +5,7 @@ import App from './App';
 import UserLogin from './components/UserLogin';
 import CreateAccount from './components/CreateAccount';
 import Cities from  "./components/Cities";
-import  Activity  from "./components/Activity"
+import  Itinerary  from "./components/Itinerary"
 import Footer from './components/Footer'
 import store from './store'; 
 import { Provider } from 'react-redux';
@@ -20,7 +20,7 @@ class Index extends Component{
         <Route path="/UserLogin" component={UserLogin} />
         <Route exact path="/" component={App} />
         <Route path="/CreateAccount" component={CreateAccount} />
-        <Route path="/itinerarios/:id" component={Activity} />
+        <Route path="/itinerarios/:id" component={Itinerary} />
         <Route path="/Cities" component={Cities}/>
         <Footer/>
         

@@ -19,7 +19,7 @@ class filterForm extends Component {
     return (
       <div>
         <label htmlFor="filter">{this.props.title} </label>
-        <input type="text" id="filter" placeholder={this.props.placeholder}
+        <input className="form-control mb-2" type="text" id="filter" placeholder={this.props.placeholder}
           value={this.state.filter} 
           onChange={this.handleChange}/>
       </div>

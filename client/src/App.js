@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import logo from './MYtineraryLogo.png';
 import Button from './components/Button.js';
 import circledArrow from './circled-right-2.png';
-import Account from './components/Account';
-import LogIn from './components/LogIn';
+import Header from './components/Header.js'
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from "./assets/MYtineraryLogo.png";
 
 
 class App extends Component {
@@ -32,9 +31,9 @@ class App extends Component {
   render() {
     return (
         <div className="App text-center">
-          <LogIn />
+          <Header />
           <header className="App-header">
-            <img src={logo} className="App-logo w-50 p-3" alt="logo" />
+            <img src={logo} className="w-50"></img>
             <p className="font-weight-bold">
               Find your perfect trip, designed by<br >
               </br>insiders who know and love their cities.
@@ -43,9 +42,8 @@ class App extends Component {
           <main>
             <div className="mt-5 mb-5" >
               <h3>Start Browsing:</h3>
-              <Button url="/Cities" className="img-fluid  w-25 m-5" image={circledArrow} altText="arrow" />
+              <Button url="/Cities" className="img-fluid w-25 m-5" image={circledArrow} altText="arrow" />
             </div>
-            <Account />
           </main>
         </div>
     );

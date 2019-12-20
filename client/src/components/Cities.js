@@ -35,12 +35,12 @@ class Cities extends Component {
 
   render() {
 
-    const title = "Cities";
+    const title = "CITIES";
 
     return (
       
       <div className="App">
-        <h2 className="App-title">{title}</h2>
+        <h2 className="App-title text-center">{title}</h2>
         <div>
           {!this.props.item
             ? " " :  <CitiesList data={this.state.ciudades} />

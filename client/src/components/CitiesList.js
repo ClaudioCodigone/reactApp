@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export class Cities extends Component {
   render() {
     return (
-      <li key={this.props.ciudad._id}>
+      <li className="card text-center p-2 mb-1 text-dark bg-dark" key={this.props.ciudad._id}>
         <Link to={`itinerarios/${this.props.ciudad._id }`}>{this.props.ciudad.name}, {this.props.ciudad.country}</Link>
       </li>
     )

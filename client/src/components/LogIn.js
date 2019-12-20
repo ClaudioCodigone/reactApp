@@ -1,9 +1,9 @@
 import React from 'react';
-import LoginLogo from '../assets/log-in-icon.jpg';
+import LoginLogo from '../assets/log-in-icon.png';
 
 function Login() {
   return (
-    <div className="dropdown text-left m-2  w-25" >
+    <div className="dropdown text-left w-25">
       <img alt="login_ico" className="w-50" src={LoginLogo}
         id="dropdownMenuButton" 
         data-toggle="dropdown"

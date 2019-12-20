@@ -63,16 +63,12 @@ class CreateAccount extends React.Component {
   render() {
     return (
 
-      <>
-        <div>
-          <div className="row centered-form">
-
-            <div className="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+      <div className="m-auto w-100">
+          <div className="text-center m-auto">
               <div className="panel panel-default">
                 <div className="panel-heading">
-                  <h3 className="panel-title">Sign up for MYtinerary</h3>
+                  <h3 className="panel-title p-3">Sign up for MYtinerary</h3>
                 </div>
-                <div className="panel-body">
                   <form role="form" onSubmit={this.handleSubmit}>
                     <div className="row">
                       <div className="col-xs-6 col-sm-6 col-md-6">
@@ -107,9 +103,6 @@ class CreateAccount extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </>
     )
   }
 }

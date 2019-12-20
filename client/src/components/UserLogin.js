@@ -5,9 +5,12 @@ import { GoogleLogout } from "react-google-login";
 const QUOTE_SERVICE_URL = "http://localhost:5000";
 const HOME_URL = "http://localhost:3000";
 const responseGoogle = response => {
-  console.log(response);
-};
-const logout = resp => {
+        window.location.href = `${HOME_URL}`;
+  }
+const responseFailGoogle = response => {
+  console.log("login failed")
+}
+const logout = resp => {  
   console.log("logged out")
 }
 
@@ -15,7 +18,6 @@ class UserLogin extends React.Component {
   constructor(props) {
     super(props);
     this.state = { email: "" };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -30,7 +32,7 @@ class UserLogin extends React.Component {
     const loginData = this.state.email;
     console.log("logindata:", loginData);
     axios
-      .post(`${QUOTE_SERVICE_URL}/auth/login`, loginData)
+      .post(`${QUOTE_SERVICE_URL}/auth/login`, { "email": loginData})
       .then(res => {
         console.log("respuesta del post de login es", res.data);
       })
@@ -85,13 +87,15 @@ class UserLogin extends React.Component {
             Sign in
           </button>
           <GoogleLogin
+            className="m-3"
             clientId="967321683835-m3mcc90mlehv5g4jqhk5n99s7e674ii5.apps.googleusercontent.com"
-            buttonText="Login"
+            buttonText="Login with Google"
             onSuccess={responseGoogle}
-            onFailure={responseGoogle}
+            onFailure={responseFailGoogle}
             cookiePolicy={"single_host_origin"}
           />
           <GoogleLogout
+            className="m-3"
             clientId="967321683835-m3mcc90mlehv5g4jqhk5n99s7e674ii5.apps.googleusercontent.com"
             buttonText="Logout"
             onLogoutSuccess={logout}
